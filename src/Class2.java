@@ -19,7 +19,8 @@ public class Class2 {
         driver.findElement(By.id("usernamereg-yid")).sendKeys("yasinargln@264@gmail.com");
         Thread.sleep(3000);
         driver.findElement(By.id("usernamereg-phone")).sendKeys("54664754754");
-        driver.quit();
+        Thread.sleep(2000);
+        driver.close();
 
     }
 }

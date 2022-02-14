@@ -7,7 +7,12 @@ public class Class1 {
         System.setProperty("webdriver.chrome.driver", "C:\\SELENIUM\\chromeDriver\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.saucedemo.com/");
-        driver.manage().window().maximize();
+        driver.manage().window().maximize();                                         //sendKeys()
+                                                                                     //click()
+                                                                                     //checkBox()
+                                                                                     //getText()
+                                                                                     //getAttribute()
+                                                                                     //isEnabled()
 
         driver.close();
         /*
