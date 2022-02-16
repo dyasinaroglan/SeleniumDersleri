@@ -5,10 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class _03By_GetAttribute {
+import java.util.List;
+
+public class _04ElementsList_ {
     public static void main(String[] args) {
-
-
         System.setProperty("webdriver.chrome.driver", "C:\\SELENIUM\\chromeDriver\\chromedriver.exe");
 
         WebDriver driver = new ChromeDriver();
@@ -22,13 +22,22 @@ public class _03By_GetAttribute {
         password.sendKeys("secret_sauce");
 
         WebElement login = driver.findElement(By.id("login-button"));
-
-        String a_class = login.getAttribute("class");
-        String a_Type = login.getAttribute("type");
-
-        System.out.println("type = " + a_Type);
-        System.out.println("class = " + a_class);
         login.click();
+
+        List<WebElement> urunLıstesi = driver.findElements(By.className("inventory_item_name"));
+
+        for (WebElement webElement : urunLıstesi) {
+            System.out.println(webElement.getText());
+        }
+        List<WebElement> addToCard = driver.findElements(By.cssSelector("div[class='inventory_item']"));
+        for (WebElement webElement : addToCard) {
+            webElement.click();
+        }
+        List<WebElement> removeAddToCard = driver.findElements(By.cssSelector("button[class='btn btn_secondary btn_small btn_inventory']"));
+        for (WebElement webElement : removeAddToCard) {
+            webElement.click();
+
+        }
 
     }
 }

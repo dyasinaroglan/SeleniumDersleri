@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class _02By_PartialLinkText {
+public class _03ByGetAttribute {
     public static void main(String[] args) {
 
 
@@ -22,10 +22,13 @@ public class _02By_PartialLinkText {
         password.sendKeys("secret_sauce");
 
         WebElement login = driver.findElement(By.id("login-button"));
+
+        String a_class = login.getAttribute("class");
+        String a_Type = login.getAttribute("type");
+
+        System.out.println("type = " + a_Type);
+        System.out.println("class = " + a_class);
         login.click();
 
-        WebElement urun1Partial = driver.findElement(By.partialLinkText("Backpack"));
-        System.out.println("urun1 getText = " + urun1Partial.getText());
-        urun1Partial.getText();
     }
 }

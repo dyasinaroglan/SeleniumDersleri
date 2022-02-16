@@ -5,10 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.List;
-
-public class _04ElementsList {
+public class _02ByPartialLinkText {
     public static void main(String[] args) {
+
+
         System.setProperty("webdriver.chrome.driver", "C:\\SELENIUM\\chromeDriver\\chromedriver.exe");
 
         WebDriver driver = new ChromeDriver();
@@ -24,20 +24,8 @@ public class _04ElementsList {
         WebElement login = driver.findElement(By.id("login-button"));
         login.click();
 
-        List<WebElement> urunLıstesi = driver.findElements(By.className("inventory_item_name"));
-
-        for (WebElement webElement : urunLıstesi) {
-            System.out.println(webElement.getText());
-        }
-        List<WebElement> addToCard = driver.findElements(By.cssSelector("div[class='inventory_item']"));
-        for (WebElement webElement : addToCard) {
-            webElement.click();
-        }
-        List<WebElement> removeAddToCard = driver.findElements(By.cssSelector("button[class='btn btn_secondary btn_small btn_inventory']"));
-        for (WebElement webElement : removeAddToCard) {
-            webElement.click();
-
-        }
-
+        WebElement urun1Partial = driver.findElement(By.partialLinkText("Backpack"));
+        System.out.println("urun1 getText = " + urun1Partial.getText());
+        urun1Partial.getText();
     }
 }
