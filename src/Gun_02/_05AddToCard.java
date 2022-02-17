@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 
 import java.util.List;
 
@@ -21,6 +22,8 @@ public class _05AddToCard {
      */
 
     public static void main(String[] args) throws InterruptedException {
+
+        System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY,"true");
 
         System.setProperty("webdriver.chrome.driver", "C:\\SELENIUM\\chromeDriver\\chromedriver.exe");
 
@@ -54,9 +57,14 @@ public class _05AddToCard {
         String url = driver.getCurrentUrl();
 
         Assert.assertEquals("Yanlis adrestesiniz","https://www.saucedemo.com/inventory.html",url);
+        //buradaki mesaj kod hata verdiğinde ekrana yansıyor
 
         //  Eger Assert sonucu dogruysa bu mesaji ekrana yazdiralim.
         //  "Testiniz Basari ile tamamlandi"
+
+
+        if(url.contains("https://www.saucedemo.com/inventory.html"))            //div[class='login_wrapper']
+            System.out.println("testiniz başarı ile tamamlandı");
     }
 }
 
