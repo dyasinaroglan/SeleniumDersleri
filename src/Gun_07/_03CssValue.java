@@ -20,7 +20,7 @@ public class _03CssValue extends BaseStaticDriver {
 
         WebElement email= driver.findElement(By.id("input_4"));
         email.click();
-        // TODO: 24.02.2022 surname ve email i tıkladıktan sonra renk değişimi oluyor. 
+        // TODO: 24.02.2022 surname ve email i tıkladıktan sonra renk değişimi oluyor.
         
         
         System.out.println("click'ten sonra = " + name.getCssValue("border-color"));

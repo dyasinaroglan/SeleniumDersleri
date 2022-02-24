@@ -12,7 +12,7 @@ public class _01Css_XPathChıld extends BaseStaticDriver {
 
         /**
          * Css
-         * ul li---- ul tagname altında
+         * ul li---- ul tagname altında li olanları veriyor
          * ul>li ----- ul tagname altında li olanları veriyor.
          * ul.sociual li:first-child listenin iilk child i alma
          * ul.sociual li:last-child listenin son child i alma
