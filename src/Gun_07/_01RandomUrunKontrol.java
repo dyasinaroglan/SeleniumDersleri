@@ -49,6 +49,6 @@ public class _01RandomUrunKontrol extends BaseStaticDriver {
 
     }
     public static int randomSayı(int size){
-        return (int) Math.random()*size;
+        return (int) (Math.random()*size);
     }
 }
