@@ -28,8 +28,6 @@ public class _02ActionHoverOver extends BaseStaticDriver {
 
         List<WebElement> menuBar = driver.findElements(By.cssSelector("span[class='wt-text-black']"));
 
-
-
         for (WebElement i : menuBar) {
             Action action = builder.moveToElement(i).build();
             action.perform();
