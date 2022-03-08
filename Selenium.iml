@@ -19,5 +19,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="selenium-server-standalone-3.5.3 (3) - Kopya" level="project" />
   </component>
 </module>

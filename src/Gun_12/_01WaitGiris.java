@@ -27,7 +27,12 @@ public class _01WaitGiris extends BaseStaticDriver {
 
         // TODO: 2.03.2022 duration of seconds ---> saniye süresi 
         // TODO: 2.03.2022 page Load TimeOut  ----> sayfa yükleme zaman aşımı 
-        // TODO: 2.03.2022 implicitly wait    -----> dolaylı olarak bekle  
+        // TODO: 2.03.2022 implicitly wait    -----> dolaylı olarak bekle
+
+        /**
+         * implicit wait -- aranan herbir element için precence olmasını bekler.
+         * max 30 saniye bekleyeek bulduğu an geçer.
+         */
 
     }
 }
