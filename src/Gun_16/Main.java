@@ -18,7 +18,7 @@ public class Main extends BaseStaticDriver {
         By submit = By.cssSelector("#btnLogin");
         By welcome = By.cssSelector("#welcome");
 
-       // driver.get("https://opensource-demo.orangehrmlive.com/index.php/auth/login");
+        driver.get("https://opensource-demo.orangehrmlive.com/index.php/auth/login");
 
         takeScreenShot();
 

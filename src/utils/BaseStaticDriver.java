@@ -20,7 +20,7 @@ public class BaseStaticDriver {
     static {
         System.setProperty("webdriver.chrome.driver", "C:\\SELENIUM\\chromeDriver\\chromedriver.exe");
 
-         driver = new ChromeDriver();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20)); // driver ilk açılırken yüklenmesini bekletiyoruz.
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20)); // her element için bekleme süresi
