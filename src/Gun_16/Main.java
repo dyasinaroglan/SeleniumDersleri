@@ -20,7 +20,7 @@ public class Main extends BaseStaticDriver {
 
         driver.get("https://opensource-demo.orangehrmlive.com/index.php/auth/login");
 
-        takeScreenShot();
+        takeScreenShotBySelenium();
 
         //id de bulurken 2 tane çıktı biri javaScript ise buna bakmaya gerek yok. direkt kopyala yapıştır.
         /*
@@ -40,10 +40,10 @@ public class Main extends BaseStaticDriver {
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(welcome));
         }catch (Exception e){
-            takeScreenShot();  //hata varsa screenShot AL DİYORUZ
+            takeScreenShotBySelenium();  //hata varsa screenShot AL DİYORUZ
         }
 
-        takeScreenShot();
+        takeScreenShotBySelenium();
 
         driver.quit();
 

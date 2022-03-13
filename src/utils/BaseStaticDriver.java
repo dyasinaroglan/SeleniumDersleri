@@ -54,7 +54,7 @@ public class BaseStaticDriver {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).sendKeys(str);
         //webElement return ettiği için click yapabiliyorum.
     }
-    public static void takeScreenShot() throws IOException {
+    public static void takeScreenShotBySelenium() throws IOException {
         String fileName = "ScreenShot_" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy_MM_dd_HH_mm_ss"));
         TakesScreenshot scrShot = (TakesScreenshot) driver;
         File srcFile = scrShot.getScreenshotAs(OutputType.FILE);
